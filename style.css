@@ -183,3 +183,236 @@ body::-webkit-scrollbar {
     border: 2px solid slategrey; /* creates padding around scroll thumb */
     
   }
+/* nuages */
+.nuage1{
+    width: 200px;
+    height: 60px;
+    background: white;
+    border-radius: 100px;
+    position: absolute;
+    top: 30px;
+    left: 5%;
+    z-index: -1;
+    animation: nuage 20s linear infinite;
+}
+.nuage2{
+    width: 150px;
+    height: 50px;
+    background: white;
+    border-radius: 100px;
+    position: absolute;
+    top: 150px;
+    left: 80%;
+    z-index: -1;
+    animation: nuage 30s linear infinite;
+}
+@keyframes nuage {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(100px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+/* menu */
+.menu{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+.bouton{
+    background: #e20434;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 4px solid #770d0d;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+.bouton:hover{
+    background: #fbd000;
+    color: #770d0d;
+}
+
+/* blocs */
+.blocs{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.brique{
+    width: 60px;
+    height: 60px;
+    background: #b5651d;
+    border: 4px solid #5c2e00;
+}
+.mystere{
+    width: 60px;
+    height: 60px;
+    background: #fbd000;
+    border: 4px solid #b5651d;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 60px;
+    animation: saute 1s infinite;
+}
+.mystere:hover{
+    background: #b5651d;
+}
+@keyframes saute {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* pieces */
+.pieces{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.piece{
+    color: #fbd000;
+    font-size: 3rem;
+    margin-left: 10px;
+    animation: tourne 1s linear infinite;
+    display: inline-block;
+}
+@keyframes tourne {
+    0%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(0.1);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.titre{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-top: 3rem;
+    text-shadow: 4px 4px black;
+}
+
+/* bonus */
+.bonus{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.champi{
+    width: 150px;
+    margin: 20px;
+    text-align: center;
+}
+.chapeau{
+    width: 120px;
+    height: 70px;
+    background: #e20434;
+    border-radius: 100px 100px 20px 20px;
+    margin: 0 auto;
+    background-image: radial-gradient(white 25%, transparent 26%);
+    background-size: 40px 40px;
+}
+.chapeau2{
+    width: 120px;
+    height: 70px;
+    background: #f88800;
+    border-radius: 100px 100px 20px 20px;
+    margin: 0 auto;
+    background-image: radial-gradient(white 25%, transparent 26%);
+    background-size: 40px 40px;
+}
+.pied{
+    width: 70px;
+    height: 50px;
+    background: #f5deb3;
+    margin: 0 auto;
+    border-radius: 0px 0px 20px 20px;
+}
+.nom{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* tuyaux */
+.tuyaux{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+    align-items: flex-end;
+}
+.tuyau{
+    width: 120px;
+}
+.tuyau2{
+    width: 120px;
+}
+.haut{
+    width: 120px;
+    height: 40px;
+    background: #43b047;
+    border: 4px solid black;
+}
+.corps{
+    width: 100px;
+    height: 120px;
+    background: #43b047;
+    border: 4px solid black;
+    border-top: none;
+    margin: 0 auto;
+}
+.corps2{
+    width: 100px;
+    height: 200px;
+    background: #43b047;
+    border: 4px solid black;
+    border-top: none;
+    margin: 0 auto;
+}
+
+/* sol */
+.sol{
+    background: #b5651d;
+    border-top: 10px solid #5c2e00;
+    height: 100px;
+    width: 100%;
+}
+.score{
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width : 499px) {
+    .bouton{
+        font-size: 0.7rem;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .titre{
+        font-size: 2rem;
+    }
+    .score{
+        font-size: 0.8rem;
+    }
+}
